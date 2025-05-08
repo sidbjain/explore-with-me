@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Explore With Me</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Fonts + Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <style>
+    html, body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    .nav-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(to right, #2f80ed, #1e6ad9);
+      color: white;
+      padding: 10px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .nav-title {
+      font-weight: bold;
+      font-size: 1.2em;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 4.5px;
+    }
+
     .nav-links a, .nav-links button {
       color: white;
       text-decoration: none;
@@ -17,53 +57,48 @@
       white-space: nowrap;
       padding: 6px 17px;
     }
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      color: #333;
-    }
-    .nav-bar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: #2f80ed;
-      color: white;
-      padding: 10px 10px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .nav-title {
-      font-weight: bold;
-      font-size: 1.2em;
-      white-space: nowrap;
-    }
-    .nav-links {
-      display: flex;
-      flex-wrap: nowrap;
-      gap: 4.5px;
-    }
+
     .nav-links .home-btn {
       background: white;
       color: #2f80ed;
       border-radius: 5px;
     }
+
     header {
-      background: #2f80ed;
+      background: linear-gradient(to right, #2f80ed, #1e6ad9);
       color: white;
-      padding: 100px 20px 30px;
+      padding: 100px 20px 50px;
       text-align: center;
       margin-top: 60px;
     }
+
+    header h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+      animation: fadeDown 1s ease-in-out;
+    }
+
+    header p {
+      font-size: 1.2em;
+      opacity: 0.9;
+      animation: fadeUp 1.5s ease-in-out;
+    }
+
+    @keyframes fadeDown {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
     nav {
       margin: 20px 0;
       text-align: center;
     }
+
     nav input {
       padding: 10px;
       width: 80%;
@@ -71,18 +106,23 @@
       border-radius: 5px;
       border: 1px solid #ccc;
     }
+
     main {
       padding: 20px;
       padding-top: 40px;
     }
+
     .featured {
       margin-bottom: 40px;
     }
+
     .featured h2 {
       text-align: center;
       color: #2f80ed;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
+      font-size: 2em;
     }
+
     .carousel {
       width: 100%;
       max-width: 800px;
@@ -90,17 +130,24 @@
       overflow: hidden;
       position: relative;
     }
+
     .carousel-track {
       display: flex;
       transition: transform 0.5s ease;
     }
+
     .carousel img {
       width: 100%;
       flex-shrink: 0;
       object-fit: cover;
       height: 700px;
+      transition: transform 0.4s ease-in-out;
     }
-    /* Footer Styles */
+
+    .carousel img:hover {
+      transform: scale(1.02);
+    }
+
     footer {
       background-color: #307FE2;
       color: #fff;
@@ -122,12 +169,13 @@
     }
 
     .social-icons a:hover {
-      color: #dfeeff;
+      color: #f0f8ff;
       transform: scale(1.2);
     }
   </style>
 </head>
 <body>
+
   <div class="nav-bar">
     <div class="nav-title">Explore With Me</div>
     <div class="nav-links">
@@ -149,65 +197,9 @@
   </header>
 
   <main>
-   <section class="featured">
-  <h2>Latest Blogs</h2>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-    
-    <a href="kedarkantha.html" style="text-decoration: none; color: inherit;">
-      <div style="width: 250px; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-        <img src="images/20250211_082843.jpg" alt="Kedarkantha Vlog" style="width: 100%; height: 160px; object-fit: cover;">
-        <div style="padding: 10px;">
-          <h3 style="margin: 0; font-size: 1.1rem; color: #2f80ed;">Kedarkantha Trek</h3>
-          <p style="margin: 5px 0 0; font-size: 0.9rem; color: #555;">A breathtaking winter adventure to 12,500ft summit.</p>
-        </div>
-      </div>
-    </a>
-<!--
-    <a href="goa-beach-vlog.html" style="text-decoration: none; color: inherit;">
-      <div style="width: 250px; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-        <img src="images/goa.jpg" alt="Goa Beach Vlog" style="width: 100%; height: 160px; object-fit: cover;">
-        <div style="padding: 10px;">
-          <h3 style="margin: 0; font-size: 1.1rem; color: #2f80ed;">Goa Beach Adventure</h3>
-          <p style="margin: 5px 0 0; font-size: 0.9rem; color: #555;">Golden beaches and vibrant nightlife experiences.</p>
-        </div>
-      </div>
-    </a>
-
-<a href="jim-corbett-vlog.html" style="text-decoration: none; color: inherit;">
-      <div style="width: 250px; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-        <img src="images/jim.jpg" alt="Goa Beach Vlog" style="width: 100%; height: 160px; object-fit: cover;">
-        <div style="padding: 10px;">
-          <h3 style="margin: 0; font-size: 1.1rem; color: #2f80ed;">jim corbett Adventure</h3>
-          <p style="margin: 5px 0 0; font-size: 0.9rem; color: #555;">Golden beaches and vibrant nightlife experiences.</p>
-        </div>
-      </div>
-    </a>
-
-<a href="jaisalmer-desert-vlog.html" style="text-decoration: none; color: inherit;">
-      <div style="width: 250px; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-        <img src="images/jaisalmer.jpg" alt="Goa Beach Vlog" style="width: 100%; height: 160px; object-fit: cover;">
-        <div style="padding: 10px;">
-          <h3 style="margin: 0; font-size: 1.1rem; color: #2f80ed;">jaisalmer desert</h3>
-          <p style="margin: 5px 0 0; font-size: 0.9rem; color: #555;">Golden beaches and vibrant nightlife experiences.</p>
-        </div>
-      </div>
-    </a>
-
-
-<a href="jaipur-city-vlog.html" style="text-decoration: none; color: inherit;">
-      <div style="width: 250px; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-        <img src="images/jaipur.jpg" alt="Goa Beach Vlog" style="width: 100%; height: 160px; object-fit: cover;">
-        <div style="padding: 10px;">
-          <h3 style="margin: 0; font-size: 1.1rem; color: #2f80ed;">jaipur city</h3>
-          <p style="margin: 5px 0 0; font-size: 0.9rem; color: #555;">Golden beaches and vibrant nightlife experiences.</p>
-        </div>
-      </div>
-    </a>
-
--->
-
-
-      <!-- Blog Cards -->
+    <section class="featured">
+      <h2>Latest Blogs</h2>
+      <!-- Cards here -->
     </section>
 
     <section class="featured">
@@ -224,14 +216,13 @@
     </section>
   </main>
 
-  <!-- 💙 Brand-themed Footer -->
   <footer>
     <p>Connect with us:</p>
     <div class="social-icons">
-      <a href="https://instagram.com/sidharthjain555" target="_blank" aria-label="Instagram">
+      <a href="https://instagram.com/yourprofile" target="_blank" aria-label="Instagram">
         <i class="fab fa-instagram"></i>
       </a>
-      <a href="https://linkedin.com/in/sidharth-jain-4b2973217" target="_blank" aria-label="LinkedIn">
+      <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">
         <i class="fab fa-linkedin-in"></i>
       </a>
     </div>
