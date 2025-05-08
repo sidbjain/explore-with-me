@@ -27,18 +27,25 @@
       width: 100%;
       background: linear-gradient(to right, #2f80ed, #1e6ad9);
       color: white;
-      padding: 10px 10px;
+      padding: 10px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       z-index: 1000;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex-wrap: wrap;
     }
 
     .nav-title {
       font-weight: bold;
       font-size: 1.2em;
       white-space: nowrap;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
     }
 
     .nav-links {
@@ -172,13 +179,64 @@
       color: #f0f8ff;
       transform: scale(1.2);
     }
+
+    /* 🌐 Responsive Enhancements */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+        background: #2f80ed;
+        border-radius: 5px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 10px 15px;
+        text-align: left;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        font-size: 15px;
+      }
+
+      .nav-links .home-btn {
+        color: #2f80ed;
+        background: white;
+        margin: 5px 10px;
+        text-align: center;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav input {
+        width: 90%;
+        font-size: 1rem;
+      }
+
+      .carousel img {
+        height: auto;
+        max-height: 300px;
+      }
+    }
   </style>
 </head>
 <body>
 
   <div class="nav-bar">
     <div class="nav-title">Explore With Me</div>
-    <div class="nav-links">
+    <div class="hamburger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="nav-links" id="navLinks">
       <a href="index.html" class="home-btn">Home</a>
       <a href="about.html">About</a>
       <a href="travel-tips.html">Travel Tips</a>
@@ -197,6 +255,7 @@
   </header>
 
   <main>
+ <main>
     <section class="featured">
       <h2>Latest Blogs</h2>
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
@@ -253,10 +312,9 @@
     </a>
 
 -->
-
-      <!-- Cards here -->
-    </section>
-
+  </section>
+    <!-- Your blog cards and carousel remain here -->
+    <!-- ... -->
     <section class="featured">
       <h2>Memories</h2>
       <div class="carousel">
@@ -294,6 +352,10 @@
     }
 
     setInterval(slide, 3000);
+
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('active');
+    }
   </script>
 </body>
 </html>
