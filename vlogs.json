@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Kedarkantha Trek",
+    "desc": "A breathtaking winter adventure",
+    "img": "images/20250211_082843.jpg",
+    "link": "kedarkantha.html",
+    "category": "Mountain"
+  },
+  {
+    "title": "Goa Beach Adventure",
+    "desc": "Golden beaches and vibrant nightlife",
+    "img": "images/goa.jpg",
+    "link": "goa-beach-vlog.html",
+    "category": "Beach"
+  },
+  {
+    "title": "Jim Corbett Safari",
+    "desc": "Wildlife thrill and forest peace",
+    "img": "images/jim.jpg",
+    "link": "jim-corbett-vlog.html",
+    "category": "Forest"
+  },
+  {
+    "title": "Jaisalmer Desert Ride",
+    "desc": "Camel rides and starry desert skies",
+    "img": "images/jaisalmer.jpg",
+    "link": "jaisalmer-desert-vlog.html",
+    "category": "Desert"
+  },
+  {
+    "title": "Jaipur City Tour",
+    "desc": "Royal forts and colorful bazaars",
+    "img": "images/jaipur.jpg",
+    "link": "jaipur-city-vlog.html",
+    "category": "City"
+  }
+]
