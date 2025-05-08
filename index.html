@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Explore With Me</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     .nav-links a, .nav-links button {
       color: white;
@@ -99,6 +100,31 @@
       object-fit: cover;
       height: 700px;
     }
+    /* Footer Styles */
+    footer {
+      background-color: #307FE2;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      width: 100%;
+    }
+
+    .social-icons {
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      color: #dfeeff;
+      transform: scale(1.2);
+    }
   </style>
 </head>
 <body>
@@ -109,8 +135,6 @@
       <a href="about.html">About</a>
       <a href="travel-tips.html">Travel Tips</a>
       <a href="contact.html">Contact</a>
-
-
     </div>
   </div>
 
@@ -118,81 +142,17 @@
     <h1>Explore With Me</h1>
     <p>Discover new places, stories, and adventures</p>
     <nav>
-  <form action="search.html" method="GET">
-    <input type="text" name="q" id="searchBar" placeholder="Search destinations...">
-  </form>
-</nav>
-
+      <form action="search.html" method="GET">
+        <input type="text" name="q" id="searchBar" placeholder="Search destinations...">
+      </form>
+    </nav>
   </header>
 
   <main>
-
-<section class="featured">
-  <h2>Latest Blogs</h2>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-    
-    <a href="kedarkantha.html" style="text-decoration: none; color: inherit;">
-      <div style="width: 250px; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-        <img src="images/20250211_082843.jpg" alt="Kedarkantha Vlog" style="width: 100%; height: 160px; object-fit: cover;">
-        <div style="padding: 10px;">
-          <h3 style="margin: 0; font-size: 1.1rem; color: #2f80ed;">Kedarkantha Trek</h3>
-          <p style="margin: 5px 0 0; font-size: 0.9rem; color: #555;">A breathtaking winter adventure to 12,500ft summit.</p>
-        </div>
-      </div>
-    </a>
-<!--
-    <a href="goa-beach-vlog.html" style="text-decoration: none; color: inherit;">
-      <div style="width: 250px; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-        <img src="images/goa.jpg" alt="Goa Beach Vlog" style="width: 100%; height: 160px; object-fit: cover;">
-        <div style="padding: 10px;">
-          <h3 style="margin: 0; font-size: 1.1rem; color: #2f80ed;">Goa Beach Adventure</h3>
-          <p style="margin: 5px 0 0; font-size: 0.9rem; color: #555;">Golden beaches and vibrant nightlife experiences.</p>
-        </div>
-      </div>
-    </a>
-
-<a href="jim-corbett-vlog.html" style="text-decoration: none; color: inherit;">
-      <div style="width: 250px; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-        <img src="images/jim.jpg" alt="Goa Beach Vlog" style="width: 100%; height: 160px; object-fit: cover;">
-        <div style="padding: 10px;">
-          <h3 style="margin: 0; font-size: 1.1rem; color: #2f80ed;">jim corbett Adventure</h3>
-          <p style="margin: 5px 0 0; font-size: 0.9rem; color: #555;">Golden beaches and vibrant nightlife experiences.</p>
-        </div>
-      </div>
-    </a>
-
-<a href="jaisalmer-desert-vlog.html" style="text-decoration: none; color: inherit;">
-      <div style="width: 250px; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-        <img src="images/jaisalmer.jpg" alt="Goa Beach Vlog" style="width: 100%; height: 160px; object-fit: cover;">
-        <div style="padding: 10px;">
-          <h3 style="margin: 0; font-size: 1.1rem; color: #2f80ed;">jaisalmer desert</h3>
-          <p style="margin: 5px 0 0; font-size: 0.9rem; color: #555;">Golden beaches and vibrant nightlife experiences.</p>
-        </div>
-      </div>
-    </a>
-
-
-<a href="jaipur-city-vlog.html" style="text-decoration: none; color: inherit;">
-      <div style="width: 250px; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-        <img src="images/jaipur.jpg" alt="Goa Beach Vlog" style="width: 100%; height: 160px; object-fit: cover;">
-        <div style="padding: 10px;">
-          <h3 style="margin: 0; font-size: 1.1rem; color: #2f80ed;">jaipur city</h3>
-          <p style="margin: 5px 0 0; font-size: 0.9rem; color: #555;">Golden beaches and vibrant nightlife experiences.</p>
-        </div>
-      </div>
-    </a>
-
--->
-
-
-  </div>
-</section>
-
-        </div>
-      </div>
-    </a>
-  </div>
-</section>
+    <section class="featured">
+      <h2>Latest Blogs</h2>
+      <!-- Blog Cards -->
+    </section>
 
     <section class="featured">
       <h2>Memories</h2>
@@ -206,9 +166,20 @@
         </div>
       </div>
     </section>
-
-
   </main>
+
+  <!-- 💙 Brand-themed Footer -->
+  <footer>
+    <p>Connect with us:</p>
+    <div class="social-icons">
+      <a href="https://instagram.com/sidharthjain555" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://linkedin.com/in/sidharth-jain-4b2973217" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </div>
+  </footer>
 
   <script>
     const track = document.getElementById('carouselTrack');
