@@ -1,38 +1,39 @@
+<!-- contact -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact - Explore With Me</title>
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background: #f4f4f4;
+      background: #f5f5f5;
       margin: 0;
       padding: 0;
       color: #333;
     }
 
     .header-bar {
-      background: linear-gradient(90deg, #2f80ed, #1e6ad9);
+      background: linear-gradient(to right, #FF6F61, #FFD700);
       color: white;
-      padding: 60px 20px 40px;
+      padding: 70px 20px 50px;
       text-align: center;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     .header-bar h1 {
-      font-size: 2.5rem;
+      font-size: 2.6rem;
       margin-bottom: 10px;
-      animation: fadeDown 0.8s ease-out;
+      animation: fadeDown 1s ease-out;
     }
 
     .header-bar p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-      animation: fadeUp 1s ease-out;
+      font-size: 1.2rem;
+      opacity: 0.95;
+      animation: fadeUp 1.2s ease-out;
     }
 
     .contact-container {
@@ -42,19 +43,18 @@
       padding: 30px;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      animation: fadeIn 1.2s ease-in-out;
+      animation: fadeIn 1s ease-in-out;
     }
 
     .contact-info {
       font-size: 16px;
       line-height: 1.8;
-      margin-top: 20px;
     }
 
     .contact-info a {
-      color: #2f80ed;
+      color: #FF6F61;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 600;
     }
 
     .contact-info a:hover {
@@ -65,7 +65,7 @@
       display: block;
       margin-top: 30px;
       text-align: center;
-      color: #2f80ed;
+      color: #FF6F61;
       text-decoration: none;
       font-weight: 600;
     }
@@ -75,9 +75,9 @@
       top: 15px;
       right: 20px;
       background: white;
-      color: #2f80ed;
+      color: #FF6F61;
       border: none;
-      font-size: 18px;
+      font-size: 20px;
       font-weight: bold;
       border-radius: 50%;
       padding: 6px 12px;
@@ -88,7 +88,7 @@
     }
 
     .close-btn:hover {
-      background: #e6f0ff;
+      background: #fff3f0;
       transform: rotate(90deg);
     }
 
@@ -107,6 +107,11 @@
       from { opacity: 0; transform: scale(0.98); }
       to { opacity: 1; transform: scale(1); }
     }
+
+    @media (max-width: 600px) {
+      .header-bar h1 { font-size: 2rem; }
+      .contact-container { padding: 20px; }
+    }
   </style>
 </head>
 <body>
@@ -114,13 +119,13 @@
   <!-- Close Button -->
   <button class="close-btn" onclick="goHome()">×</button>
 
-  <!-- Header Section -->
+  <!-- Header -->
   <div class="header-bar">
     <h1>Contact Me</h1>
-    <p>Let's connect — online or on the road! 🌍✉️</p>
+    <p>Let’s connect — online or on the road! 🌍✉️</p>
   </div>
 
-  <!-- Main Contact Info -->
+  <!-- Contact Info -->
   <div class="contact-container">
     <div class="contact-info">
       <p><strong>Email:</strong> <a href="mailto:sidharthjain.m20@email.com">sidharthjain.m20@email.com</a></p>
@@ -134,5 +139,6 @@
       window.location.href = 'index.html';
     }
   </script>
+
 </body>
 </html>
