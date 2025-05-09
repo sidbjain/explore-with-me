@@ -1,112 +1,189 @@
-
+<!-- kedarkantha page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kedarkantha Trek - Explore With Me</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f4f4f4;
       color: #333;
     }
+
     header {
-      background-color: #2f80ed;
+      background: linear-gradient(to right, #FF6F61, #FFD700);
       color: white;
-      padding: 20px;
+      padding: 70px 20px 50px;
       text-align: center;
       position: relative;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      animation: fadeDown 1s ease-out;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.95;
+      animation: fadeUp 1.2s ease-out;
+    }
+
     .close-btn {
-      position: absolute;
-      top: 10px;
+      position: fixed;
+      top: 15px;
       right: 20px;
       background: white;
-      color: #2f80ed;
+      color: #FF6F61;
       border: none;
       font-size: 18px;
       font-weight: bold;
-      border-radius: 5px;
-      padding: 5px 10px;
+      border-radius: 50%;
+      padding: 6px 12px;
       cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 9999;
+      transition: background 0.3s, transform 0.3s;
     }
+
+    .close-btn:hover {
+      background: #fff3f0;
+      transform: rotate(90deg);
+    }
+
     .container {
-      padding: 20px;
+      padding: 30px 20px;
       max-width: 900px;
-      margin: auto;
+      margin: 30px auto;
       background-color: white;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+      animation: fadeIn 1s ease-in-out;
     }
+
     img {
       width: 100%;
       height: auto;
-      margin: 10px 0;
-      border-radius: 8px;
+      margin: 15px 0;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
     }
+
+    img:hover {
+      transform: scale(1.01);
+    }
+
     h2 {
-      color: #2f80ed;
+      color: #FF6F61;
+      margin-top: 30px;
+      font-size: 1.4rem;
+    }
+
+    p {
+      line-height: 1.7;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    /* Animations */
+    @keyframes fadeDown {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.98); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .container {
+        padding: 20px;
+      }
     }
   </style>
 </head>
 <body>
+
+  <button class="close-btn" onclick="goHome()">×</button>
+
   <header>
     <h1>Kedarkantha Trek</h1>
     <p>A Winter Wonderland Adventure - 12,500 ft</p>
-    <button class="close-btn" onclick="goHome()">X</button>
   </header>
+
   <div class="container">
     <h2>My Journey</h2>
     <p>
       This journey began not in the snow, but in the warm deserts of Rajasthan — my home. With excitement in my heart and adventure on my mind, I packed my bag and began this trek as a solo traveler. 
-      My first destination was Delhi, a bustling city where my mountain dreams started to take real shape.From Delhi, I took a long journey to Dehradun, the gateway to the Himalayas. The thrill was building up. 
-      I had booked my trek through a reputed trekking company, and once I reached Dehradun, their team warmly received me.
-      I was no longer alone.
+      My first destination was Delhi, a bustling city where my mountain dreams started to take real shape. From Delhi, I took a long journey to Dehradun, the gateway to the Himalayas. The thrill was building up. 
+      I had booked my trek through a reputed trekking company, and once I reached Dehradun, their team warmly received me. I was no longer alone.
 
       From Dehradun onwards, everything started to feel more real. It was there that I met a bunch of fellow trekkers — strangers at first, but their energy and warmth made it feel like I had known them for years. 
-      We were all part of the same trekking batch, and our journey toward the mountains had just begun.People from different corners of the country had gathered here, united by the same dream — to reach the summit of Kedarkantha.
+      We were all part of the same trekking batch, and our journey toward the mountains had just begun. People from different corners of the country had gathered here, united by the same dream — to reach the summit of Kedarkantha.
       Among them were some amazing people: Nirupam, Shubham, Saurabh, Krishna, Dipali and many others. From that moment on, we were not just trekking companions — we were a team. 
       A team that laughed together, struggled together, and lifted each other up through every challenge.
     </p>
+
     <img src="images/20250211_082843.jpg" alt="Kedarkantha Morning">
-    <h2>A moment Etched in Time</h2>  
-  <p>
-    On 12th February 2025 at exactly 7:10 AM, I stood at the summit of Kedarkantha, surrounded by snow-covered peaks, crisp mountain air, and the most breathtaking sunrise I’ve ever witnessed.
-    That moment was not just a picture-perfect frame — it was a snapshot of courage, persistence, and triumph.
-    I remember the silence. No noise, no distractions — just the whisper of wind and the crackle of snow under my boots. Looking down at the world from 12,500 ft, I didn’t just feel proud. I felt free.
+
+    <h2>A Moment Etched in Time</h2>  
+    <p>
+      On 12th February 2025 at exactly 7:10 AM, I stood at the summit of Kedarkantha, surrounded by snow-covered peaks, crisp mountain air, and the most breathtaking sunrise I’ve ever witnessed.
+      That moment was not just a picture-perfect frame — it was a snapshot of courage, persistence, and triumph.
+      I remember the silence. No noise, no distractions — just the whisper of wind and the crackle of snow under my boots. Looking down at the world from 12,500 ft, I didn’t just feel proud. I felt free.
     </p>
+
     <img src="images/sunrise.jpg" alt="Snow Covered Path">
-  
+
     <h2>The Challenge Behind the Beauty</h2> 
     <p>
-     This journey was far from easy. Every step uphill demanded effort, especially in sub-zero temperatures. My body hurt, my breath shortened, and at times my mind wavered.
-     But I kept reminding myself — “You are not just climbing a mountain. You are climbing a mindset.”
-     What kept me going? The dream of that summit. The unwavering support of my trekking team. And the voice inside me that kept saying, “You can.”
+      This journey was far from easy. Every step uphill demanded effort, especially in sub-zero temperatures. My body hurt, my breath shortened, and at times my mind wavered.
+      But I kept reminding myself — “You are not just climbing a mountain. You are climbing a mindset.”
+      What kept me going? The dream of that summit. The unwavering support of my trekking team. And the voice inside me that kept saying, “You can.”
     </p>
-     <h2>Lessons the Mountains Taught Me</h2> 
+
+    <h2>Lessons the Mountains Taught Me</h2> 
     <p>
-     -Limits are illusions — we break them by showing up, again and again.
-     - Preparation is everything — physical training, mental clarity, the right gear.
-     - Community matters — we rise by lifting each other.
-     - Nature heals — no therapy like sitting quietly on a snowy ridge, watching the world turn golden at sunrise.
+      - Limits are illusions — we break them by showing up, again and again.<br>
+      - Preparation is everything — physical training, mental clarity, the right gear.<br>
+      - Community matters — we rise by lifting each other.<br>
+      - Nature heals — no therapy like sitting quietly on a snowy ridge, watching the world turn golden at sunrise.
     </p>
-    <h2> Friendship on the Mountain </h2>
-   <p>
-Trekking may look like a solo journey from the outside, but on the inside — it's a bond-building experience like no other.
-On this journey, I had the privilege of meeting some of the most amazing and inspiring individuals. We weren’t just climbing a mountain — we were building memories that would last a lifetime.
-Some names that will always stay close to my heart from this trek:
-Nirupam, Shubham, Saurabh, Krishna, Dipali.
-We supported each other, laughed together in the coldest of moments, and stood side-by-side as we watched the sun rise from 12,500 ft. The summit wasn’t just mine — it was ours.
-</p>
-<img src="images/submit.jpg" alt="Snow Covered Path">
- <img src="images/certificate.jpg" alt="Snow Covered Path">   
+
+    <h2>Friendship on the Mountain</h2>
+    <p>
+      Trekking may look like a solo journey from the outside, but on the inside — it's a bond-building experience like no other.
+      On this journey, I had the privilege of meeting some of the most amazing and inspiring individuals. We weren’t just climbing a mountain — we were building memories that would last a lifetime.
+      Some names that will always stay close to my heart from this trek: Nirupam, Shubham, Saurabh, Krishna, Dipali.
+      We supported each other, laughed together in the coldest of moments, and stood side-by-side as we watched the sun rise from 12,500 ft. The summit wasn’t just mine — it was ours.
+    </p>
+
+    <img src="images/submit.jpg" alt="Summit Photo">
+    <img src="images/certificate.jpg" alt="Certificate">
   </div>
+
   <script>
     function goHome() {
       window.location.href = 'index.html';
     }
   </script>
+
 </body>
 </html>
