@@ -305,41 +305,14 @@
       <p><strong>Trek to Naina Peak:</strong> Free (Maggie ₹50)</p>
       <p><strong>Estimated Total:</strong> ₹3000–₹4500 per person</p>
     </div>
-  </div>
+  </div> -->
 
 <script>
   function goHome() {
     window.location.href = 'index.html';
   }
 
-  function closeModal() {
-    document.getElementById("travelNote").style.display = "none";
-  }
-
-  let popupTimeout;
-
-  function showTravelPopup() {
-    const modal = document.getElementById("travelNote");
-    modal.style.display = "block";
-
-    clearTimeout(popupTimeout); // पहले का टाइमआउट क्लियर करो
-    popupTimeout = setTimeout(() => {
-      modal.style.display = "none";
-    }, 20000); // 20 सेकंड में ऑटो क्लोज
-  }
-
-  // Scroll detection every time user hits bottom
-  window.addEventListener('scroll', function () {
-    const scrollTop = window.scrollY;
-    const windowHeight = window.innerHeight;
-    const docHeight = document.body.offsetHeight;
-
-    if (scrollTop + windowHeight >= docHeight -10 ) {
-      showTravelPopup();
-    }
-  });
 </script>
--->
 
 </body>
 </html>
