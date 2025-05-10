@@ -1,0 +1,324 @@
+<!-- FULL NAINITAL BLOG PAGE WITH POPUP -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nainital Travel Blog - Explore With Me</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #3498db, #2ecc71);
+      color: white;
+      padding: 70px 20px 100px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .mountain-bg {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 120px;
+      animation: waveAnim 6s ease-in-out infinite alternate;
+      z-index: 0;
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .close-btn {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      background: white;
+      color: #3498db;
+      border: none;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 50%;
+      padding: 6px 12px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 9999;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .close-btn:hover {
+      background: #eef9f0;
+      transform: rotate(90deg);
+    }
+
+    .container {
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: 30px auto;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      margin: 15px 0;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.01);
+    }
+
+    h2 {
+      color: #2ecc71;
+      margin-top: 30px;
+      font-size: 1.4rem;
+    }
+
+    p {
+      line-height: 1.7;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    @keyframes waveAnim {
+      from { transform: translateY(0); }
+      to { transform: translateY(8px); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.98); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.5);
+      animation: fadeIn 0.5s ease;
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      position: relative;
+      animation: slideDown 0.5s ease;
+    }
+
+    .modal-content h3 {
+      color: #3498db;
+      margin-top: 0;
+    }
+
+    .modal-content p {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+
+    .modal .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      color: #aaa;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .modal .close:hover {
+      color: #333;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="close-btn" onclick="goHome()">×</button>
+
+  <header>
+    <svg class="mountain-bg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <path fill="#ffffff" fill-opacity="0.2" d="M0,288L48,266.7C96,245,192,203,288,197.3C384,192,480,224,576,213.3C672,203,768,149,864,128C960,107,1056,117,1152,138.7C1248,160,1344,192,1392,208L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg>
+    <h1>Nainital Adventure</h1>
+    <p>From Jaipur to the Hills – A Journey of Serendipity and Soul</p>
+  </header>
+
+  <div class="container">
+    
+   <!-- Paste the full Nainital blog content here (already formatted) -->
+   <h2>Starting from Jaipur – The Journey Begins</h2>
+    <p>
+      My Nainital adventure began on 27th December 2023, right from the heart of Rajasthan – Jaipur. With my heart full of excitement and plans to explore Nainital, Kainchi Dham, and Mukteshwar, I boarded a night train to Kathgodam via Delhi.
+    </p>
+    <p>Fate, however, had a special twist in store for me.</p>
+
+    <h2>Train Encounters – New Faces, New Vibes</h2>
+    <p>
+      While on the train, I met two inspiring women in the same coach. One worked in a management role at Jio, and the other had over 8 years of experience in the pharma industry. Our conversation flowed effortlessly — perhaps because I too work in the IT sector.
+    </p>
+    <p>
+      We clicked instantly. As we chatted, I discovered that they too were headed toward a spiritual retreat — Kainchi Dham. Without hesitation, I asked if I could join them, and they happily agreed.
+    </p>
+
+    <h2>Kainchi Dham – Spiritual Beginnings</h2>
+    <p>
+      We arrived at Kathgodam station around 5:00 AM and freshened up. Soon after, we arranged a shared cab to Kainchi Dham, paying ₹1500 (₹500 each). The road from Kathgodam to Kainchi Dham was mesmerizing — tall green hills, twisting valleys, and fresh mountain air filled with peace.
+    </p>
+    <p>
+      When we reached, we sat quietly at Neem Karoli Baba’s Ashram, soaking in the spiritual aura. That peaceful energy set the tone for the rest of the journey.
+    </p>
+
+    <h2>Unplanned Plans – Heading to Nainital</h2>
+    <p>
+      Originally, the two women had no intention of staying longer — they planned to return home. But seeing my itinerary, I casually asked, “Why not explore Nainital and Mukteshwar with me?”
+    </p>
+    <p>
+      Surprisingly, they agreed!
+    </p>
+    <p>
+      We took another shared cab to Nainital for ₹1200 total. My hostel room at GoStops was already booked. They hadn’t planned to stay, but seeing the safety and comfort of the hostel, one of them decided to extend her leave and stay too. The other returned home the same day.
+    </p>
+
+    <h2>Exploring Nainital – Local Touch and Unexpected Joy</h2>
+    <p>
+      The next morning, we hired an Alto for ₹1500 and explored several beautiful places:
+    </p>
+    <ul>
+      <li>Apple Orchards & Honey Garden</li>
+      <li>Tea Gardens</li>
+      <li>The iconic Golu Devta Temple with hundreds of bells</li>
+    </ul>
+    <p>
+      We even enjoyed authentic pahadi (local) food, which made the day more memorable. That evening, we returned to Nainital and walked around Mall Road, soaking in the winter charm.
+    </p>
+
+    <h2>New Bonds at the Hostel – Strangers to Friends</h2>
+    <p>
+      The next day, the woman who stayed with me also returned home. But Nainital had more people waiting to become part of this story.
+    </p>
+    <p>
+      At the hostel, I met Kartikeya, Preeti, and Ryan — each one vibrant and kind. Preeti worked in DXC Technologies, Kartikeya in Jio as a Data Engineer, and Ryan was a professional photographer.
+    </p>
+    <p>
+      Soon, our bond grew stronger — over stories, laughter, and hot chai.
+    </p>
+
+    <h2>The Naina Peak Trek – Adventure Calls</h2>
+    <p>
+      We decided to trek to the beautiful Naina Peak the next morning. A new friend, Avnish, also joined us. He had left his job to explore India full-time — a true wanderer.
+    </p>
+    <p>
+      The trek was around 6 km, and we started early to catch the sunrise from the peak. The view from the top was breathtaking — the golden light hitting the snowy peaks, the cold wind brushing our faces, and silence that spoke volumes.
+    </p>
+    <p>
+      At the summit, we found an Army surveillance post, where an officer offered us hot Maggie for ₹50. That simple meal, in that moment, felt like a royal feast.
+    </p>
+
+    <h2>Final Moments – Memories Etched Forever</h2>
+    <p>
+      As we descended through tiny mountain villages, we explored quiet corners of Nainital. We strolled along the riverside, admired the architecture near Mall Road, and captured beautiful moments in Ryan’s camera — snapshots of friendship and freedom.
+    </p>
+    <p>
+      After spending a couple more days enjoying the calm of Nainital, I finally said goodbye and headed back home. But the friendships, the peace, and the stories we shared remained with me.
+    </p>
+
+    <h2>A Journey of Serendipity and Soul</h2>
+    <p>
+      What started as a solo trip from Jaipur turned into an unforgettable adventure of chance encounters, spiritual awakenings, soulful landscapes, and lifelong connections.
+    </p>
+    <p><strong>If you're ever lost in life — go to the mountains. You might just find yourself.</strong></p>
+   <!-- I can paste it again if you need all text re-added directly here -->
+  </div>
+
+  <!-- Fare Info Modal -->
+  <div id="travelNote" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3>🧳 Travel & Fare Info – Nainital Trip</h3>
+      <p><strong>Departure:</strong> Jaipur → Delhi → Kathgodam (Night Train)</p>
+      <p><strong>Kathgodam to Kainchi Dham:</strong> ₹1500 total (₹500 per person)</p>
+      <p><strong>Kainchi Dham to Nainital:</strong> ₹1200 total</p>
+      <p><strong>Hostel Stay (GoStops):</strong> ~₹600/night</p>
+      <p><strong>Local Alto hire:</strong> ₹1500/day</p>
+      <p><strong>Trek to Naina Peak:</strong> Free (Maggie ₹50)</p>
+      <p><strong>Estimated Total:</strong> ₹3000–₹4500 per person</p>
+    </div>
+  </div>
+
+<script>
+  function goHome() {
+    window.location.href = 'index.html';
+  }
+
+  function closeModal() {
+    document.getElementById("travelNote").style.display = "none";
+  }
+
+  let popupTimeout;
+
+  function showTravelPopup() {
+    const modal = document.getElementById("travelNote");
+    modal.style.display = "block";
+
+    clearTimeout(popupTimeout); // पहले का टाइमआउट क्लियर करो
+    popupTimeout = setTimeout(() => {
+      modal.style.display = "none";
+    }, 20000); // 20 सेकंड में ऑटो क्लोज
+  }
+
+  // Scroll detection every time user hits bottom
+  window.addEventListener('scroll', function () {
+    const scrollTop = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const docHeight = document.body.offsetHeight;
+
+    if (scrollTop + windowHeight >= docHeight -10 ) {
+      showTravelPopup();
+    }
+  });
+</script>
+
+
+</body>
+</html>
